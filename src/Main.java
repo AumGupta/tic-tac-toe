@@ -2,8 +2,10 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -15,7 +17,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
 
-public class TicTacToe extends JFrame
+public class Main extends JFrame
                        implements ActionListener
 {
     protected boolean gameOn = true;
@@ -134,11 +136,13 @@ public class TicTacToe extends JFrame
     }
 
 
-    public TicTacToe(){
+    public Main(){
         // Setting JFrame
         setVisible(true);
         setSize(340,412);
         setTitle("TicTacToe by Om Gupta");
+        URL iconURL = Main.class.getResource("icon.png");
+        setIconImage(Toolkit.getDefaultToolkit().getImage(iconURL));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(backGColor);
 
@@ -219,7 +223,7 @@ public class TicTacToe extends JFrame
         SwingUtilities.invokeLater(new Runnable(){
             @Override
             public void run() {
-                new TicTacToe();
+                new Main();
             }   
         });
     }
