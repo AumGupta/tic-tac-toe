@@ -1,4 +1,4 @@
-# [Tic-Tac-Toe](https://github.com/AumGupta/Tic-Tac-Toe)
+# [tic-tac-toe](https://github.com/AumGupta/Tic-Tac-Toe)
  _old-school game new-school gameplay_
 
 ## ✨ ️User Interface
